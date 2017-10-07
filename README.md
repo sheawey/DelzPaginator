@@ -122,3 +122,4 @@ print_r($pager->getPages()); //获取分页数数组
 //设置和获取每页显示记录数,默认是20
 echo $pager->getPageSize();
 $pager->setPageSize(10);
+```
