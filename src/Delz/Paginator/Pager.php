@@ -107,6 +107,8 @@ class Pager implements IPager
     {
         $this->page = min(($page > 0 ? $page : $this->getFirstPage()), $this->getLastPage());
 
+        $this->computingPage();
+
         return $this;
     }
 
@@ -185,6 +187,8 @@ class Pager implements IPager
     public function setFirstPage($firstPage)
     {
         $this->firstPage = (int)$firstPage;
+
+        $this->computingPage();
     }
 
     /**
